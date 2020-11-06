@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+body {
+  background-image: url("Niva2.jpg");
+}
+
+</style>
+
+<script language="JavaScript">
+    <!--
+    function EURConverter(){
+    document.converter.dollar.value = document.converter.euro.value * 1.17
+    document.converter.KM.value = document.converter.euro.value * 1.96
+    document.converter.Kuna.value = document.converter.euro.value * 7.56
+    }
+    function USDConverter(){
+    document.converter.euro.value = document.converter.dollar.value * 0.85
+    document.converter.KM.value = document.converter.dollar.value * 1.20
+    document.converter.Kuna.value = document.converter.dollar.value * 6.45
+    }
+    function KMConverter(){
+    document.converter.dollar.value = document.converter.KM.value * 0.6
+    document.converter.euro.value = document.converter.KM.value * 0.51
+    document.converter.Kuna.value = document.converter.KM.value * 3.86
+    }
+    function HRKConverter(){
+    document.converter.dollar.value = document.converter.Kuna.value * 0.16
+    document.converter.KM.value = document.converter.Kuna.value * 0.12
+    document.converter.euro.value = document.converter.Kuna.value * 0.13
+    }
+	</script>
+	
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Web shop</title>
+  
+</head>
+
+<body style="background-color:grey;">
+
+<div class="header">
+  <h1>Web shop </h1>
+</div>
+
+<div class="topnav">
+  <a href="https://eugenkovacec.github.io/WS/">Home</a>
+  <a href="https://hr.wikipedia.org/wiki/Lada_Niva">Wiki</a>
+  <a href="https://eugenkovacec.github.io/INFO/">Info</a>
+  <a href="">Web shop</a>
+</div>
+
+  <h1 style="color:black;text-align:center";> Pretvarač Valuta </h1>
+  <p style="color:black;text-align:center";> Prosječna početna cijena je 10000€ </p>
+    <form name="converter">
+    <table border="5">
+	<tr>
+    <td style="color:black">Kuna: </td><td><input type="text" name="Kuna" onChange="HRKConverter()" /></td>
+    </tr>
+    <tr>
+    <td style="color:black">Euro: </td><td><input type="text" name="euro" onChange="EURConverter()" /></td>
+    </tr>
+    <tr>
+    <td style="color:black">US Dollar: </td><td><input type="text" name="dollar" onChange="USDConverter()" /></td>
+    </tr>
+    <tr>
+    <td style="color:black">Konvertabilna marka:</td><td><input type="text" name="KM" onChange="KMConverter()" /></td>
+    </tr>
+    <tr>
+    <td colspan="2" align="center"><input type="button" value="Pretvori" /></td>
+    </tr>
+    </table>
+    </form>
+    
+
+  
+  
+</body>
+
+</html>
